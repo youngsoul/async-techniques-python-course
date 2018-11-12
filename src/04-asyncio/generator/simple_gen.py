@@ -17,7 +17,8 @@ def fib():
         yield current
 
 
-result = fib()
+result = fib() # fib is not actually called here.  this returns a generator object and is not called
+                # until we get values from the generator
 
 for n in result:
     print(n, end=', ')
